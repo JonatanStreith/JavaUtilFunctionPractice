@@ -8,6 +8,7 @@ import se.ecutb.model.Person;
 import javax.crypto.spec.PSource;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
@@ -22,27 +23,31 @@ public class App
 
     public static void main( String[] args )
     {
-        //getErik();            //  1
+        getErik();            //  1
 
-        //getFemales();         //  2
+        getFemales();         //  2
 
-        //bornAfter();          //  3
+        bornAfter();          //  3
 
-        //find123();            //  4
+        find123();            //  4
 
-        //find456ToString();    //  5
+        find456ToString();    //  5
 
-        //findEBoys();          //  6
+        findEBoys();          //  6
 
-        //findAgeBelowTen();    //  7
+        findAgeBelowTen();    //  7
 
-        //printAllUlfs();       //  8
+        printAllUlfs();       //  8
 
-        //printAllDoubles();    //  9
+        printAllDoubles();    //  9
 
-        //printPalindromes();   //  10
+        printPalindromes();   //  10
 
-        sortAs();
+        sortAs();             //  11
+
+        sort1950Reverse();    //  12
+
+        sortMultiTypes();     //  13
 
     }
 
@@ -140,6 +145,25 @@ public class App
         List<Person> theAs = dataStorage.findAndSort(p -> p.getFirstName().substring(0, 1).equals("A"), Comparator.comparing(p -> p.getBirthDate()));
 
         printList(theAs);
+
+    }
+
+    public static void sort1950Reverse(){
+
+        List<Person> reverse50s = dataStorage.findAndSort(p -> p.getBirthDate().getYear() < 1950, (p1, p2) -> p2.getBirthDate().compareTo(p1.getBirthDate()) );
+
+        printList(reverse50s);
+    }
+
+    public static void sortMultiTypes(){
+
+        List<Person> multi = dataStorage.findAndSort( Comparator
+                .comparing(Person::getLastName)
+                .thenComparing(Person::getFirstName)
+                .thenComparing(Person::getBirthDate));
+
+
+        printList(multi);
 
     }
 

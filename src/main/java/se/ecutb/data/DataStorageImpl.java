@@ -88,9 +88,12 @@ public class DataStorageImpl implements DataStorage {
 
     @Override
     public List<Person> findAndSort(Comparator<Person> comparator){
-        LocalDate date = LocalDate.now();
 
-        return null;
+        List<Person> result = new ArrayList<>(personList);
+
+        result.sort(comparator);
+
+        return result;
     }
 
     @Override
@@ -107,8 +110,9 @@ public class DataStorageImpl implements DataStorage {
         result.sort(comparator);
 
         return result;
-
-
-
     }
+
+
+
+
 }
