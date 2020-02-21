@@ -139,9 +139,6 @@ public class App
 
         List<Person> theAs = dataStorage.findAndSort(p -> p.getFirstName().substring(0, 1).equals("A"), Comparator.comparing(p -> p.getBirthDate()));
 
-
-
-
         printList(theAs);
 
     }
