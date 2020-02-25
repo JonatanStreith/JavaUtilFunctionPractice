@@ -77,6 +77,7 @@ public class App
     public static void getErik(){
         List<Person> Eriks = dataStorage.findMany(p -> p.getFirstName().equals("Erik"));
 
+
         printList(Eriks);
     }
 
@@ -156,15 +157,22 @@ public class App
     }
 
     public static void sortMultiTypes(){
-
         List<Person> multi = dataStorage.findAndSort( Comparator
                 .comparing(Person::getLastName)
                 .thenComparing(Person::getFirstName)
-                .thenComparing(Person::getBirthDate));
-
-
+                .thenComparing(Person::getBirthDate)
+        );
         printList(multi);
-
     }
+
+/*    public static void sortMultiTypesBuggy(){
+        List<Person> multi = dataStorage.findAndSort( Comparator
+                .comparing(p -> p.getLastName())
+                .thenComparing(p -> p.getFirstName())
+                .thenComparing(p -> p.getBirthDate())
+        );
+        printList(multi);
+    }*/
+
 
 }
