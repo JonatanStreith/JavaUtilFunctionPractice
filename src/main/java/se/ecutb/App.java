@@ -23,31 +23,31 @@ public class App
 
     public static void main( String[] args )
     {
-        getErik();            //  1
-
-        getFemales();         //  2
-
-        bornAfter();          //  3
-
-        find123();            //  4
-
-        find456ToString();    //  5
-
-        findEBoys();          //  6
-
-        findAgeBelowTen();    //  7
-
-        printAllUlfs();       //  8
-
-        printAllDoubles();    //  9
-
-        printPalindromes();   //  10
-
-        sortAs();             //  11
-
-        sort1950Reverse();    //  12
-
-        sortMultiTypes();     //  13
+//        getErik();            //  1
+//
+//        getFemales();         //  2
+//
+//        bornAfter();          //  3
+//
+//        find123();            //  4
+//
+//        find456ToString();    //  5
+//
+//        findEBoys();          //  6
+//
+//        findAgeBelowTen();    //  7
+//
+//        printAllUlfs();       //  8
+//
+//        printAllDoubles();    //  9
+//
+//        printPalindromes();   //  10
+//
+//        sortAs();             //  11
+//
+//        sort1950Reverse();    //  12
+//
+//        sortMultiTypes();     //  13
 
     }
 
